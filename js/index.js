@@ -20,6 +20,8 @@ $(function(){
     const monthProductWrap = $('.content-3 .slide-wrap');
     const monthProductGroup = $('.content-3 .slide-group');
     const monthProductPaging = $('.content-3 .paging li');
+    const productLikeBtn = $('.content .icons .xi-heart');
+    const productWishBtn = $('.content .icons .xi-cart');
     let mainSlideDataNum = 0;
     let mainSlideIndex = 0;
     let bannerIndex = 0;
@@ -268,6 +270,22 @@ $(function(){
         newProductPaging.eq(monthProductPage).addClass('now');
     }
 
+    function likeBtnClick (){
+        if ($(this).hasClass('like') == true) {
+            $(this).removeClass('like');
+        } else {
+            $(this).addClass('like');
+        }
+    }
+
+    function wishBtnClick (){
+        if ($(this).hasClass('wish') == true) {
+            $(this).removeClass('wish');
+        } else {
+            $(this).addClass('wish');
+        }
+    }
+
 
     // 2
 
@@ -286,4 +304,6 @@ $(function(){
     monthProductWrap.swiperight(monthProductSwipeRight);
     monthProductWrap.swipeleft(monthProductSwipeLeft);
     monthProductPaging.click(monthProductPageMove);
+    productLikeBtn.click(likeBtnClick);
+    productWishBtn.click(wishBtnClick);
 });
