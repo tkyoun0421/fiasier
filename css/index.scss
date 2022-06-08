@@ -546,6 +546,15 @@ html{
                                         cursor: pointer;
                                         color: #333;
                                         opacity: 0.6;
+                                        transition: color .3s;
+                                    }
+                                    .like{
+                                        opacity: 0.8;
+                                        color: red;
+                                    }
+                                    .wish{
+                                        opacity: 0.8;
+                                        color: #000;
                                     }
                                 }
                             }
@@ -718,6 +727,14 @@ html{
                                         cursor: pointer;
                                         color: #333;
                                         opacity: 0.6;
+                                    }
+                                    .like{
+                                        opacity: 0.8;
+                                        color: red;
+                                    }
+                                    .wish{
+                                        opacity: 0.8;
+                                        color: #000;
                                     }
                                 }
                             }
