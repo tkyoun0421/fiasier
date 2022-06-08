@@ -237,7 +237,7 @@ html{
                 position: absolute;
                 left: 0;
                 bottom: 0;
-                width: 30%;
+                width: 35%;
                 background-color: rgba(255,255,255,.15);
                 font-size: 0.8rem;
                 font-weight: 700;
@@ -258,14 +258,12 @@ html{
                     width: 100%;
                     padding: 10px 10% 30px 0;
                     i{
-                        font-size: #{'max(2vw,18px)'};
+                        font-size: 1.3125rem;
+                        color: #2b2b2b;
+                        cursor: pointer;
                     }
                     i:nth-child(1){
-                        color: #333;
-                        padding-right: 2.5615em;
-                    }
-                    i:nth-child(2){
-                        color: #333;
+                        margin-right: 2.8125em;
                     }
                 }
             }
@@ -297,7 +295,8 @@ html{
             cursor: pointer;
             @include mobile {
                 width: 100%;
-                padding-top: 0.9375rem;
+                margin-top: 0.9375rem;
+                height: 25rem;
             }
             .image{
                 width: 100%;
@@ -319,11 +318,12 @@ html{
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                height: auto;
-                width: 150%;
+                height: 600px;
+                width: 1500px;
+                overflow: hidden;
                 z-index: 14;
                 opacity: 0;
-                // display: none;
+                display: none;
                 transition: z-index 1.5s;
             }
 
@@ -492,75 +492,81 @@ html{
                 }
                 .slide-group{
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     width: 300%;
+                    transition: all .3s;
                     @include mobile {
                         width: 600%;
                     }
-                    article{
-                        width: 8.0729%;
-                        .image{
-                            height: 17.5rem;
-                            position: relative;
-                            overflow: hidden;
-                            @for $i from 1 through 12{
-                                &.i#{$i}{
-                                    background-image: url('./images/content-2/pic-#{$i}.jpg');
+                    .item-page{
+                        width: calc(100% / 3);
+                        display: flex;
+                        justify-content: space-around;
+                        article{
+                            width: calc(100% / 4 - 5px);
+                            .image{
+                                height: 17.5rem;
+                                position: relative;
+                                overflow: hidden;
+                                @for $i from 1 through 12{
+                                    &.i#{$i}{
+                                        background-image: url('./images/content-2/pic-#{$i}.jpg');
+                                    }
+                                    @include bg();
                                 }
-                                @include bg();
-                            }
-                            .discount-rate{
-                                position: absolute;
-                                bottom: 0.3125em;
-                                left: 0.3125em;
-                                font-size: 0.9375rem;
-                                padding: 0.3125em;
-                                background-color: #fff;
-                                color: #333;
-                                font-weight: 400;
-                                font-family: 'Noto Sans KR' , serif;
-                                box-shadow: 1px 1px 3px #ccc;
-                                border-radius: 3px;
-                                font-weight: 500;
-                            }
-                            &:hover .icons{
-                                bottom: 0.3125em;
-                                opacity: 1;
-                            }
-                            .icons{
-                                position: absolute;
-                                right: 0.3125em;
-                                bottom: -1.875em;
-                                opacity: 0;
-                                transition: all .5s;
-                                i{
+                                .discount-rate{
+                                    position: absolute;
+                                    bottom: 0.3125em;
+                                    left: 0.3125em;
                                     font-size: 0.9375rem;
                                     padding: 0.3125em;
                                     background-color: #fff;
-                                    border: 1px solid #ccc;
-                                    cursor: pointer;
                                     color: #333;
-                                    opacity: 0.6;
+                                    font-weight: 400;
+                                    font-family: 'Noto Sans KR' , serif;
+                                    box-shadow: 1px 1px 3px #ccc;
+                                    border-radius: 3px;
+                                    font-weight: 500;
+                                }
+                                &:hover .icons{
+                                    bottom: 0.3125em;
+                                    opacity: 1;
+                                }
+                                .icons{
+                                    position: absolute;
+                                    right: 0.3125em;
+                                    bottom: -1.875em;
+                                    opacity: 0;
+                                    transition: all .5s;
+                                    i{
+                                        font-size: 0.9375rem;
+                                        padding: 0.3125em;
+                                        background-color: #fff;
+                                        border: 1px solid #ccc;
+                                        cursor: pointer;
+                                        color: #333;
+                                        opacity: 0.6;
+                                    }
                                 }
                             }
-                        }
-                        .texts{
-                            margin-top: 1.75rem;
-                            font-family: 'Noto Sans KR' , serif;
-                            color: #333;
-                            h3{
-                                font-size: 0.875rem;
-                                font-weight: 700;
-                            }
-                            h5{
-                                color: #cccccc;
-                                font-size: 0.75rem;
-                                padding-top: 0.375em;
-                                text-decoration: line-through;
-                            }
-                            h4{
-                                font-weight: 700;
-                                padding-top: 0.375em;
+                            .texts{
+                                margin-top: 1.75rem;
+                                font-family: 'Noto Sans KR' , serif;
+                                color: #333;
+                                h3{
+                                    font-size: 0.875rem;
+                                    font-weight: 700;
+                                }
+                                h5{
+                                    color: #cccccc;
+                                    font-size: 0.75rem;
+                                    padding-top: 0.375em;
+                                    text-decoration: line-through;
+                                }
+                                h4{
+                                    font-weight: 700;
+                                    padding-top: 0.375em;
+                                }
                             }
                         }
                     }
@@ -658,75 +664,81 @@ html{
                 overflow: hidden;
                 .slide-group{
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     width: 300%;
+                    transition: all .3s;
                     @include mobile {
                         width: 600%;
                     }
-                    article{
-                        width: 8.0729%;
-                        .image{
-                            height: 17.5rem;
-                            position: relative;
-                            overflow: hidden;
-                            @for $i from 1 through 12{
-                                &.i#{$i}{
-                                    background-image: url('./images/content-3/pic-#{$i}.jpg');
+                    .item-page{
+                        width: calc(100% / 3);
+                        display: flex;
+                        justify-content: space-around;
+                        article{
+                            width: calc(100% / 4 - 5px);
+                            .image{
+                                height: 17.5rem;
+                                position: relative;
+                                overflow: hidden;
+                                @for $i from 1 through 12{
+                                    &.i#{$i}{
+                                        background-image: url('./images/content-3/pic-#{$i}.jpg');
+                                    }
+                                    @include bg();
                                 }
-                                @include bg();
-                            }
-                            .discount-rate{
-                                position: absolute;
-                                bottom: 0.3125em;
-                                left: 0.3125em;
-                                font-size: 0.9375rem;
-                                padding: 0.3125em;
-                                background-color: #fff;
-                                color: #333;
-                                font-weight: 400;
-                                font-family: 'Noto Sans KR' , serif;
-                                box-shadow: 1px 1px 3px #ccc;
-                                border-radius: 3px;
-                                font-weight: 500;
-                            }
-                            &:hover .icons{
-                                bottom: 0.3125em;
-                                opacity: 1;
-                            }
-                            .icons{
-                                position: absolute;
-                                right: 0.3125em;
-                                bottom: -1.875em;
-                                opacity: 0;
-                                transition: all .5s;
-                                i{
+                                .discount-rate{
+                                    position: absolute;
+                                    bottom: 0.3125em;
+                                    left: 0.3125em;
                                     font-size: 0.9375rem;
                                     padding: 0.3125em;
                                     background-color: #fff;
-                                    border: 1px solid #ccc;
-                                    cursor: pointer;
                                     color: #333;
-                                    opacity: 0.6;
+                                    font-weight: 400;
+                                    font-family: 'Noto Sans KR' , serif;
+                                    box-shadow: 1px 1px 3px #ccc;
+                                    border-radius: 3px;
+                                    font-weight: 500;
+                                }
+                                &:hover .icons{
+                                    bottom: 0.3125em;
+                                    opacity: 1;
+                                }
+                                .icons{
+                                    position: absolute;
+                                    right: 0.3125em;
+                                    bottom: -1.875em;
+                                    opacity: 0;
+                                    transition: all .5s;
+                                    i{
+                                        font-size: 0.9375rem;
+                                        padding: 0.3125em;
+                                        background-color: #fff;
+                                        border: 1px solid #ccc;
+                                        cursor: pointer;
+                                        color: #333;
+                                        opacity: 0.6;
+                                    }
                                 }
                             }
-                        }
-                        .texts{
-                            margin-top: 1.75rem;
-                            font-family: 'Noto Sans KR' , serif;
-                            color: #333;
-                            h3{
-                                font-size: 0.875rem;
-                                font-weight: 700;
-                            }
-                            h5{
-                                color: #cccccc;
-                                font-size: 0.75rem;
-                                padding-top: 0.375em;
-                                text-decoration: line-through;
-                            }
-                            h4{
-                                font-weight: 700;
-                                padding-top: 0.375em;
+                            .texts{
+                                margin-top: 1.75rem;
+                                font-family: 'Noto Sans KR' , serif;
+                                color: #333;
+                                h3{
+                                    font-size: 0.875rem;
+                                    font-weight: 700;
+                                }
+                                h5{
+                                    color: #cccccc;
+                                    font-size: 0.75rem;
+                                    padding-top: 0.375em;
+                                    text-decoration: line-through;
+                                }
+                                h4{
+                                    font-weight: 700;
+                                    padding-top: 0.375em;
+                                }
                             }
                         }
                     }
