@@ -382,12 +382,10 @@ html body {
 
 .main-wrap main .slide-wrap .slide-group :nth-child(1) .image .texts {
   color: #ebebee;
-  top: 70%;
 }
 
 .main-wrap main .slide-wrap .slide-group :nth-child(2) .image .texts {
-  color: #ebebee;
-  left: 60%;
+  color: #333;
 }
 
 .main-wrap main .slide-wrap .index-number {
