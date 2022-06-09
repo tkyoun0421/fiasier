@@ -1738,7 +1738,7 @@ html body {
   margin-left: auto;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 750px) {
   .modal-box-wrap .modal-box .user-info {
     width: 100%;
   }

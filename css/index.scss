@@ -1185,14 +1185,14 @@ html{
             margin-top: 2.5rem;
             width: 50%;
             margin-left: auto;
-            @include min-mobile {
+            @include mobile {
                 width: 100%;
             }
             li{
                 font-size: 1rem;
                 cursor: pointer;
                 text-align: center;
-            }
+            }            
         }
     }
 }
