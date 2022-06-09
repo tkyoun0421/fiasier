@@ -22,15 +22,37 @@ $(function(){
     const monthProductPaging = $('.content-3 .paging li');
     const productLikeBtn = $('.content .icons .xi-heart');
     const productWishBtn = $('.content .icons .xi-cart');
+    const productDiscount = $('.content-2 .discount-rate');
+    const productDiscountRate = $('.content-2 .discount-rate span');
+    const productOrigianlPrice = $('.content-2 .texts .original-prices span');
+    const productOrigianlNum = $('.content-2 .texts .original-prices');
+    const productDiscountedPrice = $('.content-2 .texts .final-prices span');
     let mainSlideDataNum = 0;
     let mainSlideIndex = 0;
     let bannerIndex = 0;
     let productPage = 0;
     let monthProductPage = 0;
 
-
+    // 기본 세팅
+    $(document).ready(function(){
+        for(i = 0; i < 12 ; i++){
+            productDiscountRate.eq(i).text(parseInt(((productDiscountedPrice.eq(i).text() - productOrigianlPrice.eq(i).text()) / productOrigianlPrice.eq(i).text()) * -100));
+            if (productDiscount.eq(i).text() == 0+'%') {
+                productDiscount.eq(i).css({
+                    display: 'none'
+                });                
+            }
+            if (productOrigianlPrice.eq(i).text() == productDiscountedPrice.eq(i).text()){
+                productOrigianlNum.eq(i).css({
+                    display: 'none'
+                })
+            }       
+        }
+    });
+    
     // 1
 
+    
     function modalOn (){
         modalBoxWrap.css({
             right: '0px'
@@ -277,7 +299,9 @@ $(function(){
         } else {
             $(this).addClass('wish');
         }
+        console.log(Number(productOrigianlPrice.text()) / 2);
     }
+
 
 
     // 2
