@@ -69,7 +69,7 @@ html{
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        color: #000;
+        color: #333;
         line-height: 2.5rem;
         font-family: 'Roboto' , serif;
         z-index: 97;
@@ -132,20 +132,20 @@ html{
                 .bar-before{
                     width: 9px;
                     height: 2px;
-                    background-color: #000;
+                    background-color: #333;
                 }
                 .bar{
                     margin-top: 4px;
                     width: 18px;
                     height: 2px;
-                    background-color: #000;
+                    background-color: #333;
                 }
                 .bar-after{
                     margin-top: 4px;
                     width: 9px;
                     height: 2px;
                     margin-left: 9px;
-                    background-color: #000;
+                    background-color: #333;
                 }
             }
         }
