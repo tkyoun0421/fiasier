@@ -326,6 +326,9 @@ html{
                 opacity: 0;
                 display: none;
                 transition: z-index 1.5s;
+                @include mobile {
+                    height: 600px;
+                }
             }
 
             .texts{
