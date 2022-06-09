@@ -1,6 +1,7 @@
 $(function(){
     // 변수 선언
     const modalBar = $('.header-wrap .modal-bar');
+    const countWish = $('.count-wish');
     const modalBoxWrap = $('.modal-box-wrap');
     const modalBoxClose = $('.modal-box-wrap a');
     const mainSlideArticle = $('.main-wrap article');
@@ -24,9 +25,14 @@ $(function(){
     const productWishBtn = $('.content .icons .xi-cart');
     const productDiscount = $('.content-2 .discount-rate');
     const productDiscountRate = $('.content-2 .discount-rate span');
-    const productOrigianlPrice = $('.content-2 .texts .original-prices span');
     const productOrigianlNum = $('.content-2 .texts .original-prices');
+    const productOrigianlPrice = $('.content-2 .texts .original-prices span');
     const productDiscountedPrice = $('.content-2 .texts .final-prices span');
+    const monthProductDiscount = $('.content-3 .discount-rate');
+    const monthProductDiscountRate = $('.content-3 .discount-rate span');
+    const monthProductOrigianlNum = $('.content-3 .texts .original-prices');
+    const monthProductOrigianlPrice = $('.content-3 .texts .original-prices span');
+    const monthProductDiscountedPrice = $('.content-3 .texts .final-prices span');
     let mainSlideDataNum = 0;
     let mainSlideIndex = 0;
     let bannerIndex = 0;
@@ -37,7 +43,7 @@ $(function(){
     $(document).ready(function(){
         for(i = 0; i < 12 ; i++){
             productDiscountRate.eq(i).text(parseInt(((productDiscountedPrice.eq(i).text() - productOrigianlPrice.eq(i).text()) / productOrigianlPrice.eq(i).text()) * -100));
-            if (productDiscount.eq(i).text() == 0+'%') {
+            if (productDiscount.eq(i).text() == 0 + '%') {
                 productDiscount.eq(i).css({
                     display: 'none'
                 });                
@@ -45,8 +51,23 @@ $(function(){
             if (productOrigianlPrice.eq(i).text() == productDiscountedPrice.eq(i).text()){
                 productOrigianlNum.eq(i).css({
                     display: 'none'
-                })
-            }       
+                });
+            }
+            monthProductDiscountRate.eq(i).text(parseInt(((monthProductDiscountedPrice.eq(i).text() - monthProductOrigianlPrice.eq(i).text()) / monthProductOrigianlPrice.eq(i).text()) * -100));
+            if (monthProductDiscount.eq(i).text() == 0 + '%') {
+                monthProductDiscount.eq(i).css({
+                    display: 'none'
+                });                
+            }
+            if (monthProductOrigianlPrice.eq(i).text() == monthProductDiscountedPrice.eq(i).text()){
+                monthProductOrigianlNum.eq(i).css({
+                    display: 'none'
+                });
+            }        
+            productOrigianlPrice.eq(i).text(productOrigianlPrice.eq(i).text().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+            productDiscountedPrice.eq(i).text(productDiscountedPrice.eq(i).text().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            monthProductOrigianlPrice.eq(i).text(monthProductOrigianlPrice.eq(i).text().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            monthProductDiscountedPrice.eq(i).text(monthProductDiscountedPrice.eq(i).text().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         }
     });
     
@@ -298,10 +319,9 @@ $(function(){
             $(this).removeClass('wish');
         } else {
             $(this).addClass('wish');
-        }
-        console.log(Number(productOrigianlPrice.text()) / 2);
+        };
+        countWish.text($('.wish').length);       
     }
-
 
 
     // 2

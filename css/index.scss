@@ -69,7 +69,7 @@ html{
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        color: #fff;
+        color: #000;
         line-height: 2.5rem;
         font-family: 'Roboto' , serif;
         z-index: 97;
@@ -109,25 +109,43 @@ html{
             li{
                 cursor: pointer;
             }
+            .cart{
+                position: relative;
+                .count-wish{
+                    background-color: #34404b;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    bottom: 31px;
+                    font-size: 0.625rem;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 18px;
+                    cursor: auto;
+                }
+            }
             .modal-bar{
                 margin-top: 0.875rem;
                 .bar-before{
-                    background-color: #fff;
                     width: 9px;
                     height: 2px;
+                    background-color: #000;
                 }
                 .bar{
                     margin-top: 4px;
-                    background-color: #fff;
                     width: 18px;
                     height: 2px;
+                    background-color: #000;
                 }
                 .bar-after{
                     margin-top: 4px;
-                    background-color: #fff;
                     width: 9px;
                     height: 2px;
                     margin-left: 9px;
+                    background-color: #000;
                 }
             }
         }
