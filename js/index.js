@@ -356,7 +356,6 @@ $(function(){
     }
 
     function windowScroll (){
-        console.log(itemWrap.offset().top);
         if ($(window).scrollTop() >= itemWrap.offset().top) {
             toTopBtn.addClass('active');
         } else if ($(window).scrollTop() < itemWrap.offset().top) {

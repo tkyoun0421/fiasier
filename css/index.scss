@@ -1070,6 +1070,9 @@ html{
         z-index: -999;
         height: 100%;
         outline: 1px solid #e0e0e0;
+        @include min-mobile {
+            display: none;
+        }
     }
     &::after{
         content: '';
@@ -1080,7 +1083,10 @@ html{
         right: 0; 
         z-index: -999;
         height: 100%;
-        outline: 1px solid #e0e0e0;      
+        outline: 1px solid #e0e0e0;     
+        @include min-mobile {
+            display: none;
+        } 
     }
 }
 

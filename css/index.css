@@ -1592,6 +1592,12 @@ html body {
   outline: 1px solid #e0e0e0;
 }
 
+@media (max-width: 440px) {
+  .item-wrap::before {
+    display: none;
+  }
+}
+
 .item-wrap::after {
   content: '';
   display: block;
@@ -1602,6 +1608,12 @@ html body {
   z-index: -999;
   height: 100%;
   outline: 1px solid #e0e0e0;
+}
+
+@media (max-width: 440px) {
+  .item-wrap::after {
+    display: none;
+  }
 }
 
 .modal-box-wrap {
