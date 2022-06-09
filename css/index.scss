@@ -4,6 +4,9 @@
 html{
     body{
         font-family: 'Roboto' , serif;
+        position: relative;
+        width: 100vw;
+        overflow-x: hidden;
     }    
 }
 
@@ -149,6 +152,112 @@ html{
                 }
             }
         }
+    }   
+    .fixed{
+        position: fixed;
+        top: 0;
+    } 
+}
+
+.to-top-btn-wrap{
+    position: fixed;
+    bottom: 0%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    font-size: 0.75rem;
+    background-color: #34404b;
+    z-index: 9989;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 1s;
+    opacity: 0;
+    @include mobile {
+        display: none;
+    }
+}
+.active{
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    bottom: 8%;  
+    font-size: 0.875rem;      
+}
+
+// 검색창
+.search-wrap{
+    width: 100vw;
+    height: 0vh;
+    position: absolute;
+    opacity: 0.959;
+    top: -100vh;
+    left: 0;
+    z-index: 9999;
+    background-color: #fff;
+    transition: all .5s;
+    a{
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        font-weight: 700;
+        font-size: 1.25rem;
+        padding-right: 2.5rem;
+        color: #333;
+        background: url('./images/closeBtn.png') right 0 center no-repeat;
+        background-size: 30px;        
+        display: block;
+    }
+    form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        @include mobile {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .search-input{
+            border: none;
+            border-bottom: 1px solid #333;
+            width: 90%;
+            display: inline-block;
+            font-size: 1.75rem;
+            font-weight: 700;
+            padding-right: 20px;
+            @include mobile {
+                width: 88%;
+                font-size: 1.125rem;
+            } 
+            @include min-mobile {
+                width: 80%;
+                font-size: 0.875rem;
+            }
+        }
+        .search-submit{
+            background-color: #fff;
+            background-image: url('./images/search_submit.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: none;
+            width: 30px;
+            height: 30px;
+            vertical-align: bottom;
+            cursor: pointer;
+            @include mobile {
+                width: 22px;
+                height: 22px;
+            } 
+            @include min-mobile {
+                width: 16px;
+                height: 16px;
+            }
+        }
     }
 }
 
@@ -160,9 +269,9 @@ html{
             position: relative;
             height: 100vh;
             overflow: hidden;
-            @include mobile {
-                height: 33.125em;
-            }
+            // @include mobile {
+            //     height: 33.125em;
+            // }
             .slide-group{
                 z-index: 10;
                 article{
@@ -180,9 +289,9 @@ html{
                                 background-image: url('./images/main/main-pic#{$i}.jpg');
                             }
                         }
-                        @include mobile {
-                            height: 33.125em;
-                        }
+                        // @include mobile {
+                        //     height: 33.125em;
+                        // }
                         .texts{
                             position: absolute;
                             top: 60%;
@@ -293,7 +402,7 @@ html{
 // banner
 .banner-wrap{
     width: 100%;
-    max-width: 1980px;
+    max-width: 1920px;
     margin: 0 auto;
     @include mobile {
         max-width: 750px;
@@ -1003,7 +1112,6 @@ html{
         }
         a{
             font-size: 1.25rem;
-            color: #fff;
             font-weight: 700;
             padding-right: 2.5rem;
             color: #333;

@@ -1,7 +1,13 @@
 $(function(){
     // 변수 선언
+    const toTopBtn = $('.to-top-btn-wrap');
+    const itemWrap = $('.item-wrap');
     const modalBar = $('.header-wrap .modal-bar');
     const countWish = $('.count-wish');
+    const searchWrap = $('.search-wrap');
+    const searchCloseBtn = $('.search-wrap a');
+    const searchSubmitBtn = $('.search-wrap .search-submit');
+    const searchBtn = $('.header-wrap .xi-search');
     const modalBoxWrap = $('.modal-box-wrap');
     const modalBoxClose = $('.modal-box-wrap a');
     const mainSlideArticle = $('.main-wrap article');
@@ -323,6 +329,45 @@ $(function(){
         countWish.text($('.wish').length);       
     }
 
+    function searchClick (){
+        searchWrap.css({
+            height: '100vh',
+            top: 0         
+        });
+        $('body').css({
+            height: '100vh',
+            overflow: 'hidden'
+        });
+    }
+
+    function searchClose (){
+        searchWrap.css({
+            height: 0,
+            top: '-100vh'
+        });
+        $('body').css({
+            height: 'auto',
+            overflow: 'auto'
+        });
+    }
+
+    function searchSubmit (){
+        alert('서버와 연결할 수 없습니다');
+    }
+
+    function windowScroll (){
+        console.log(itemWrap.offset().top);
+        if ($(window).scrollTop() >= itemWrap.offset().top) {
+            toTopBtn.addClass('active');
+        } else if ($(window).scrollTop() < itemWrap.offset().top) {
+            toTopBtn.removeClass('active');
+        }
+    }
+
+    function toTheTop (){
+        $('html').animate({scrollTop: 0},500);
+    }
+
 
     // 2
 
@@ -343,4 +388,9 @@ $(function(){
     monthProductPaging.click(monthProductPageMove);
     productLikeBtn.click(likeBtnClick);
     productWishBtn.click(wishBtnClick);
+    searchBtn.click(searchClick);
+    searchCloseBtn.click(searchClose);
+    searchSubmitBtn.click(searchSubmit);
+    $(window).scroll(windowScroll);
+    toTopBtn.click(toTheTop);
 });
