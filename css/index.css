@@ -8,7 +8,7 @@ html body {
 
 .header-wrap {
   max-width: 1920px;
-  height: 7.5em;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -101,14 +101,14 @@ html body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   border-radius: 50%;
-  bottom: 31px;
+  bottom: 3em;
   font-size: 0.625rem;
   color: #fff;
   text-align: center;
-  line-height: 18px;
+  line-height: 1.125rem;
   cursor: auto;
 }
 
