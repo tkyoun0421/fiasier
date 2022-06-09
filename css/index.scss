@@ -108,6 +108,7 @@ html{
             li{
                 cursor: pointer;
             }
+            .search{}
             .modal-bar{
                 margin-top: 0.875rem;
                 .bar-before{
@@ -318,8 +319,8 @@ html{
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                height: 600px;
-                width: 1500px;
+                height: 800px;
+                width: auto;
                 overflow: hidden;
                 z-index: 14;
                 opacity: 0;
