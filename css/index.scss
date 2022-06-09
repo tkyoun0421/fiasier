@@ -508,15 +508,24 @@ html{
                         justify-content: space-around;
                         article{
                             width: calc(100% / 4 - 5px);
-                            .image{
+                            cursor: pointer;
+                            .image-wrap{
                                 height: 17.5rem;
-                                position: relative;
                                 overflow: hidden;
-                                @for $i from 1 through 12{
-                                    &.i#{$i}{
-                                        background-image: url('./images/content-2/pic-#{$i}.jpg');
+                                position: relative;
+                                .image{
+                                    height: 17.5rem;
+                                    overflow: hidden;
+                                    transition: all .5s;
+                                    @for $i from 1 through 12{
+                                        &.i#{$i}{
+                                            background-image: url('./images/content-2/pic-#{$i}.jpg');
+                                        }
+                                        @include bg();
                                     }
-                                    @include bg();
+                                    &:hover{
+                                        transform: scale(1.05);
+                                    }
                                 }
                                 .discount-rate{
                                     position: absolute;
@@ -622,6 +631,7 @@ html{
                 border-radius: 1.375em;
                 color: #333;
                 border: 1px solid #333;
+                background-color: #fff;
                 font-family: 'Noto Sans KR' , serif;
                 margin: 0 auto;
                 margin-top: 3.125rem;
@@ -689,15 +699,24 @@ html{
                         justify-content: space-around;
                         article{
                             width: calc(100% / 4 - 5px);
-                            .image{
+                            cursor: pointer;
+                            .image-wrap{
                                 height: 17.5rem;
-                                position: relative;
                                 overflow: hidden;
-                                @for $i from 1 through 12{
-                                    &.i#{$i}{
-                                        background-image: url('./images/content-3/pic-#{$i}.jpg');
+                                position: relative;
+                                .image{
+                                    height: 17.5rem;
+                                    overflow: hidden;
+                                    transition: all .5s;
+                                    @for $i from 1 through 12{
+                                        &.i#{$i}{
+                                            background-image: url('./images/content-2/pic-#{$i}.jpg');
+                                        }
+                                        @include bg();
                                     }
-                                    @include bg();
+                                    &:hover{
+                                        transform: scale(1.05);
+                                    }
                                 }
                                 .discount-rate{
                                     position: absolute;
@@ -731,6 +750,7 @@ html{
                                         cursor: pointer;
                                         color: #333;
                                         opacity: 0.6;
+                                        transition: color .3s;
                                     }
                                     .like{
                                         opacity: 0.8;
@@ -799,6 +819,7 @@ html{
                 border-radius: 1.375em;
                 color: #333;
                 border: 1px solid #333;
+                background-color: #fff;
                 font-family: 'Noto Sans KR' , serif;
                 margin: 0 auto;
                 margin-top: 3.125rem;
