@@ -244,17 +244,17 @@ html{
             background-repeat: no-repeat;
             background-size: cover;
             border: none;
-            width: 30px;
-            height: 30px;
+            width: 1.875rem;
+            height: 1.875rem;
             vertical-align: bottom;
             cursor: pointer;
             @include mobile {
-                width: 22px;
-                height: 22px;
+                width: 1.375rem;
+                height: 1.375rem;
             } 
             @include min-mobile {
-                width: 16px;
-                height: 16px;
+                width: 1rem;
+                height: 1rem;
             }
         }
     }
@@ -264,7 +264,7 @@ html{
 .main-wrap{
     main{
         .slide-wrap{
-            margin-top: -120px;
+            margin-top: -7.5rem;
             position: relative;
             height: 100vh;
             overflow: hidden;
@@ -389,7 +389,7 @@ html{
                     display: flex;
                     justify-content: end;
                     width: 100%;
-                    padding: 10px 10% 30px 0;
+                    padding: 0.7142em 10% 2.1428em 0;
                     i{
                         font-size: 1.3125rem;
                         color: #2b2b2b;
@@ -1127,7 +1127,7 @@ html{
             padding-right: 2.5rem;
             color: #333;
             background: url('./images/closeBtn.png') right 0 center no-repeat;
-            background-size: 30px;        
+            background-size: 1.875rem;        
             display: block;
             position: absolute;
             right: 60px;
@@ -1137,10 +1137,10 @@ html{
             font-size: 2.25rem;
             color: #333;
             font-weight: 700;
-            margin-top: 50px;
+            margin-top: 3.125rem;
             position: relative;
             font-family: 'Roboto' , serif;
-            line-height: 40px;
+            line-height: 2.5rem;
             cursor: pointer;
             &::after{
                 content: '';
@@ -1158,7 +1158,7 @@ html{
             }
         }
         .con-box{
-            margin-top: 20px;
+            margin-top: 1.25rem;
             cursor: pointer;
             .list-title{
                 font-size: 1.375rem;
@@ -1171,7 +1171,7 @@ html{
                 }
             }
             .img-box{
-                margin-top: 20px;
+                margin-top: 1.25rem;
                 img{
                     vertical-align: middle;
                     width: 100%;
@@ -1182,7 +1182,7 @@ html{
         .user-info{
             display: flex;
             justify-content: space-between;
-            margin-top: 40px;
+            margin-top: 2.5rem;
             width: 50%;
             margin-left: auto;
             @include min-mobile {
