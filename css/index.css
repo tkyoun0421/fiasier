@@ -380,6 +380,16 @@ html body {
   opacity: 0;
 }
 
+.main-wrap main .slide-wrap .slide-group :nth-child(1) .image .texts {
+  color: #ebebee;
+  top: 70%;
+}
+
+.main-wrap main .slide-wrap .slide-group :nth-child(2) .image .texts {
+  color: #ebebee;
+  left: 60%;
+}
+
 .main-wrap main .slide-wrap .index-number {
   position: absolute;
   top: 80%;
@@ -787,7 +797,7 @@ html body {
 
 .content-wrap .content-2 section h5 {
   font-family: 'Noto Sans KR' , serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #333333;
 }
@@ -1136,7 +1146,7 @@ html body {
 
 .content-wrap .content-3 section h5 {
   font-family: 'Noto Sans KR' , serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #333333;
 }

@@ -272,12 +272,12 @@ html{
             //     height: 33.125em;
             // }
             .slide-group{
-                z-index: 10;
+                z-index: 10;                
                 article{
                     position: absolute;
                     top: 0;
                     left: 0;       
-                    transition: all .5s;             
+                    transition: all .5s;                                                
                     .image{
                         @include bg();
                         width: 100vw;
@@ -331,6 +331,14 @@ html{
                 :nth-child(1)~article{
                     z-index: 90;
                     opacity: 0;
+                }
+                :nth-child(1) .image .texts{
+                    color: #ebebee;
+                    top: 70%
+                }
+                :nth-child(2) .image .texts{
+                    color: #ebebee;
+                    left: 60%;
                 }
             }
             .index-number{
@@ -607,7 +615,7 @@ html{
         section{
             h5{
                 font-family: 'Noto Sans KR' , serif;
-                font-size: 1.125rem;
+                font-size: 1.25rem;
                 font-weight: 700;
                 color: #333333;
                 @include min-mobile {
@@ -801,7 +809,7 @@ html{
         section{
             h5{
                 font-family: 'Noto Sans KR' , serif;
-                font-size: 1.125rem;
+                font-size: 1.25rem;
                 font-weight: 700;
                 color: #333333;
                 @include min-mobile {
