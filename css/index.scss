@@ -710,7 +710,7 @@ html{
                                     transition: all .5s;
                                     @for $i from 1 through 12{
                                         &.i#{$i}{
-                                            background-image: url('./images/content-2/pic-#{$i}.jpg');
+                                            background-image: url('./images/content-3/pic-#{$i}.jpg');
                                         }
                                         @include bg();
                                     }
