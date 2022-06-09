@@ -256,7 +256,6 @@ $(function(){
 
     function monthProductPageMove (){
         monthProductPage = $(this).index();
-        console.log(monthProductPage);
         monthProductGroup.css({
             marginLeft: (monthProductPage) * -100 + '%'
         });
