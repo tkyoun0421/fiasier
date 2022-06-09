@@ -157,21 +157,14 @@ $(function(){
                 });
                 newProductPaging.removeClass('now');
                 newProductPaging.eq(productPage).addClass('now');
-            } else if (productPage >= 4) {
-                productPage = 3;
-                newProductGroup.css({
-                    marginLeft: productPage * -100 + '%'
-                });
-                newProductPaging.removeClass('now');
-                newProductPaging.eq(productPage).addClass('now');
-            }
-            if (monthProductPage >=3) {
+            }            
+            if (monthProductPage >= 3) {
                 monthProductPage = 1;
                 monthProductGroup.css({
                     marginLeft: monthProductPage * -100 + '%'
                 });
                 monthProductPaging.removeClass('now');
-                monthProductPaging.eq(monthProductPage).adClass('now');
+                monthProductPaging.eq(monthProductPage).addClass('now');
             }
         } else if ($(window).width() > 750) {
             bannerArticle.css({
@@ -263,11 +256,12 @@ $(function(){
 
     function monthProductPageMove (){
         monthProductPage = $(this).index();
-        newProductGroup.css({
+        console.log(monthProductPage);
+        monthProductGroup.css({
             marginLeft: (monthProductPage) * -100 + '%'
         });
-        newProductPaging.removeClass('now');
-        newProductPaging.eq(monthProductPage).addClass('now');
+        monthProductPaging.removeClass('now');
+        monthProductPaging.eq(monthProductPage).addClass('now');
     }
 
     function likeBtnClick (){
