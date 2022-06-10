@@ -44,6 +44,7 @@ $(function(){
     let bannerIndex = 0;
     let productPage = 0;
     let monthProductPage = 0;
+    let desktopVer = 0;
 
     // 기본 세팅
     $(document).ready(function(){
@@ -196,29 +197,35 @@ $(function(){
 
     function windowResize (){
         if ($(window).width() <= 750) {
-            bannerArticle.css({
-                width: 100 + '%'
-            });
-            if (productPage >= 3) {
-                productPage = 1;
-                newProductGroup.css({
-                    marginLeft: productPage * -100 + '%'
+            desktopVer = false;
+            if (desktopVer == false) {
+                bannerArticle.css({
+                    width: 100 + '%'
                 });
-                newProductPaging.removeClass('now');
-                newProductPaging.eq(productPage).addClass('now');
-            }            
-            if (monthProductPage >= 3) {
-                monthProductPage = 1;
-                monthProductGroup.css({
-                    marginLeft: monthProductPage * -100 + '%'
-                });
-                monthProductPaging.removeClass('now');
-                monthProductPaging.eq(monthProductPage).addClass('now');
+                if (productPage >= 3) {
+                    productPage = 1;
+                    newProductGroup.css({
+                        marginLeft: productPage * -100 + '%'
+                    });
+                    newProductPaging.removeClass('now');
+                    newProductPaging.eq(productPage).addClass('now');
+                }            
+                if (monthProductPage >= 3) {
+                    monthProductPage = 1;
+                    monthProductGroup.css({
+                        marginLeft: monthProductPage * -100 + '%'
+                    });
+                    monthProductPaging.removeClass('now');
+                    monthProductPaging.eq(monthProductPage).addClass('now');
+                }
             }
         } else if ($(window).width() > 750) {
-            bannerArticle.css({
-                width: 'calc(100% / 3 - 10px)'
-            });
+            desktopVer = true;
+            if (desktopVer == true) {
+                bannerArticle.css({
+                    width: 'calc(100% / 3 - 10px)'
+                });
+            }
         }
     }
 
