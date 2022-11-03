@@ -1205,13 +1205,13 @@ html{
         width: 90%;
         margin: 0 auto;
         max-width: 1920px;
+        padding: 7.5rem 0;
         @include mobile {
             @include grid ('mobile');
             flex-direction: column-reverse;
         }
         h1{
-            width: 100%;
-            margin-top: 7.5rem;
+            width: 100%;            
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
